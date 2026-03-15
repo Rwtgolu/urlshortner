@@ -1,16 +1,19 @@
-const {nanoid} =require("nanoid")
-const url=require('..models/url')
-
+const shortid =require("shortid")
+const url=require("../models/url")
 
 
 async function shoturl(req,res){
-const shortiD=nanoid(8);
-if(!ReportBody.url) return res.status(400).json("url is not avilabil");
+try {
+const shortiD=shortid()
+if(!req.body.url) return res.status(400).json("url is not available");
 await url.create({
 shortid:shortiD,
-rediretid:body.url,
+redirecturl:req.body.url,
 })
 return res.json({id:shortiD})
+} catch(err) {
+return res.status(500).json({error: err.message})
+}
 }
 
 
