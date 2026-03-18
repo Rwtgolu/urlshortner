@@ -10,11 +10,13 @@
   "author": "gaurav",
   "license": "ISC",
   "dependencies": {
-    "express": "^5.2.1",
-    "mongoose": "^9.3.0",
-    "nanoid": "^5.1.6",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^7.0.0",
+    "nanoid": "^3.3.4",
     "nodemon": "^3.1.14",
-    "shortid": "^2.2.17",
-    "xpress": "^2.4.6"
+    "shortid": "^2.2.16"
   }
 }
