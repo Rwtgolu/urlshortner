@@ -42,9 +42,23 @@ async function getuserurls(req, res) {
         return res.status(500).json({ error: err.message })
     }
 }
+async function allurls(req,res){
+     const data = await url.find();
+    
+        res.send(`
+            <html>
+            <body>
+                <ol>
+                    ${data.map(u => `<li>${u.shortid} - ${u.redirecturl} - ${u.totalclicks}</li>`).join("")}
+                </ol>
+            </body>
+            </html>
+        `);
+}
 
 module.exports = {
     shorturl,
     geturl,
-    getuserurls
+    getuserurls,
+    allurls,
 }
