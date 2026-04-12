@@ -1,12 +1,12 @@
 require('dotenv').config();
-console.log('Environment loaded');
+
 const express = require('express');
 const cors = require('cors');
 
 const app = express();
 
 const port = 3002;
-console.log('Express app created, port:', port);
+
 
 const urlroute = require("./routes/url")
 
