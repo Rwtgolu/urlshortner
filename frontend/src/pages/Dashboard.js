@@ -54,7 +54,7 @@ function Dashboard() {
   };
 
   const copyToClipboard = (shortId) => {
-    const shortUrl = `http://localhost:3000/url/${shortId}`;
+    const shortUrl = `http://localhost:3002/url/${shortId}`;
     navigator.clipboard.writeText(shortUrl);
     alert('Copied to clipboard!');
   };

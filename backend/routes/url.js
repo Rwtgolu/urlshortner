@@ -12,5 +12,6 @@ router.get('/user/urls', authMiddleware, getuserurls)
 router.get('/all', authMiddleware,allurls);
 
 router.get('/:id', geturl)
+
     
 module.exports = router;
