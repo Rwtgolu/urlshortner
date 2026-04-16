@@ -20,7 +20,7 @@ mongo("mongodb://127.0.0.1:27017/shorturl")
 
 app.use(cors());
 app.use(express.json());
-
+//routes
 app.use('/url', urlroute);
 app.use('/user', handleuser)
 

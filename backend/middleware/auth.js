@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken")
 
 const JWT_SECRET = process.env.JWT_SECRET 
-
+//middleware for auth check 
 function authMiddleware(req, res, next) {
     try {
         const token = req.headers.authorization?.split(" ")[1]; // Bearer token

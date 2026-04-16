@@ -34,6 +34,7 @@ async function handleuserlogin(req, res) {
         const { email, password } = req.body;
 
         const userData = await user.findOne({ email });
+        //if user not found
         if (!userData) return res.status(404).json({ error: "User not found" })
 
         // Compare password
